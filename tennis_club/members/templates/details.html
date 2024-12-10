@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+
+{% block title %}
+{{ member.first_name }} | Club Members Details
+{% endblock %}
+
+{% block content %}
+
+<div class="mycard">
+<h1> Member Details</h1>
+
+<ul>
+  <li>First name: {{ member.first_name }}</li>
+  <li>Last name: {{ member.last_name }}</li>
+  <li>Phone: {{ member.phone_number }}</li>
+  <li>Date: {{  member.joined_at|date:"F j, Y"  }}</li>
+
+</ul>
+
+</div>
+
+
+{% endblock %}
